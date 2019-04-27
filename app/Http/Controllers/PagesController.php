@@ -12,10 +12,16 @@ class PagesController extends Controller
     }
 
     public function about(){
-        return view('pages.about');
+        $title = "About Us";
+        return view('pages.about')->with('title', $title);
     }
 
-    public function services(){
-        return view('pages.services');
+    public function functionalities(){
+        // $title = "HR Functionalities";
+        $data = array(
+            'title' => 'HR Functionalities',
+            'functionalities' => ['Recruit Employee', 'Promote Employee', 'Derank Employee', 'Raise Employee', 'Remove Employee']
+        );
+        return view('pages.functionalities')->with($data);
     }
 }
