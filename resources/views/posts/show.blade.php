@@ -1,7 +1,6 @@
 @extends('layouts.app')
 
 @section('content')
-    @extends('inc.navbar')
     <div class="container">
         <div class="row">
             <div class="col">
