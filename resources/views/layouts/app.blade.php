@@ -10,6 +10,10 @@
     <link rel="stylesheet" href="{{asset('css/app.css')}}">
 </head>
 <body>
+    <br>
     @yield('content')
 </body>
+
+    {{-- Bootstrap JavaScript --}}
+    <script type="text/javascript" src="{{asset('js/app.js')}}"></script>
 </html>
