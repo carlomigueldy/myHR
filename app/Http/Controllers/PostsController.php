@@ -31,7 +31,7 @@ class PostsController extends Controller
         // $posts = Post::orderBy('title', 'desc')->take(1)->get();
         
         // -- You may also use Pagination; it's really simple
-        $posts = Post::orderBy('title', 'desc')->paginate(1);
+        $posts = Post::orderBy('created_at', 'desc')->paginate(1);
         return view('posts.index')->with('posts', $posts);
     }
 

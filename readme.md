@@ -69,3 +69,18 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-source software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+## Installed using Composer from tutorial
+
+Change the URL into myhr.me 
+    - Go to xampp/apache/conf/extra/vhosts.conf
+    - Go to Windows/System32/drivers/etc/hosts.conf
+
+Before you perform Database Migration, you must do these first
+    - Go to xampp/php/php.ini, then uncomment extention=pdo_pgsql (2 files)
+
+Then use artisan to generate a key
+    php artisan key:generate or php artisan generate:key
+
+composer require laravelcollective/html
+composer require unisharp/laravel-ckeditor
