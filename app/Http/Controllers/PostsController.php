@@ -56,8 +56,6 @@ class PostsController extends Controller
             'title' => 'required',
             'body' => 'required'
         ]);
-
-        return "You have submitted successfully!";
     }
 
     /**
