@@ -13,7 +13,7 @@ class CreateEmpsTable extends Migration
      */
     public function up()
     {
-        Schema::create('emp', function (Blueprint $table) {
+        Schema::create('emps', function (Blueprint $table) {
             $table->bigIncrements('emp_id');
             $table->unsignedBigInteger('pos_id')->default('1');
             $table->string('emp_name');
@@ -30,6 +30,6 @@ class CreateEmpsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('emp');
+        Schema::dropIfExists('emps');
     }
 }

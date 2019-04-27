@@ -15,8 +15,8 @@ class CreatePositionsTable extends Migration
     {
         Schema::create('positions', function (Blueprint $table) {
             $table->bigIncrements('pos_id');
-            $table->string('position');
-            $table->timestamp('created_at')->default(DB::raw('CURRENT_TIMESTAMP'));
+            $table->string('position')->unique();
+            // $table->timestamp('created_at')->default(DB::raw('CURRENT_TIMESTAMP'));
         });
     }
 

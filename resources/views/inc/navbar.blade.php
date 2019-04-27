@@ -13,6 +13,12 @@
               <a class="nav-link" href="/posts">Blog</a>
             </li>
           <li class="nav-item">
+              <a class="nav-link" href="/employees">Employees</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="/positions">Positions</a>
+          </li>
+          <li class="nav-item">
             <a class="nav-link" href="/about">About</a>
           </li>
           <li class="nav-item">

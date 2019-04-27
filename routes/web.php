@@ -20,4 +20,7 @@ Route::get('/about', 'PagesController@about');
 Route::get('/functionalities', 'PagesController@functionalities');
 
 Route::resource('posts', 'PostsController');
+Route::resource('employees', 'EmployeesController');
+Route::resource('positions', 'PositionsController');
+
 
