@@ -20,7 +20,8 @@ class PagesController extends Controller
         // $title = "HR Functionalities";
         $data = array(
             'title' => 'HR Functionalities',
-            'functionalities' => ['Recruit Employee', 'Promote Employee', 'Derank Employee', 'Raise Employee', 'Remove Employee']
+            'functionalities' => ['Recruit Employee', 'Promote Employee', 
+                'Derank Employee', 'Raise Employee', 'Remove Employee']
         );
         return view('pages.functionalities')->with($data);
     }
