@@ -14,7 +14,23 @@ class PostsController extends Controller
      */
     public function index()
     {
-        $posts = Post::all();
+        // -- Retrieve all the data, the most basic
+        // $posts = Post::all();
+
+        // -- Order posts by descending 
+        // $posts = Post::orderBy('title', 'desc')->get();
+
+        // -- You can use a Query from the Database
+        // $posts = DB::select('SELECT * FROM posts');
+
+        // -- You can specify it by where clause
+        // return Post::where('title', 'Post Two');
+
+        // -- You may limit how much data you want to display
+        // $posts = Post::orderBy('title', 'desc')->take(1)->get();
+        
+        // -- You may also use Pagination; it's really simple
+        $posts = Post::orderBy('title', 'desc')->paginate(1);
         return view('posts.index')->with('posts', $posts);
     }
 
@@ -47,7 +63,8 @@ class PostsController extends Controller
      */
     public function show($id)
     {
-        //
+        $post = Post::find($id);
+        return view('posts.show')->with('post', $post);
     }
 
     /**
