@@ -86,10 +86,10 @@ Before you perform Database Migration, you must do these first
     - Go to xampp/php/php.ini, then uncomment extention=pdo_pgsql (2 files)
 
 Then use artisan to generate a key
-    php artisan key:generate or php artisan generate:key
+        php artisan key:generate or php artisan generate:key
 
 Additional Installations:
-
+    
     Laravel Collective
         composer require laravelcollective/html
     Laravel Ckeditor

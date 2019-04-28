@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Position;
+use DB;
 
 class PositionsController extends Controller
 {
@@ -13,7 +15,8 @@ class PositionsController extends Controller
      */
     public function index()
     {
-        return view('positions.index');
+        $positions = Position::paginate(5);
+        return view('positions.index')->with('positions', $positions);
     }
 
     /**

@@ -14,12 +14,10 @@ class CreateEmpsTable extends Migration
     public function up()
     {
         Schema::create('emps', function (Blueprint $table) {
-            $table->bigIncrements('emp_id');
-            $table->unsignedBigInteger('pos_id')->default('1');
+            $table->bigIncrements('id');
             $table->string('emp_name');
             $table->string('emp_email')->unique();
             $table->timestamp('created_at')->default(DB::raw('CURRENT_TIMESTAMP'));
-            $table->foreign('pos_id')->references('pos_id')->on('positions');
         });
     }
 
