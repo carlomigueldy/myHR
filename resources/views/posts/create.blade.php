@@ -13,7 +13,8 @@
                     {{Form::label('body', 'Body')}}
                     {{Form::textarea('body', '', ['id' => 'article-ckeditor' ,'class' => 'form-control', 'placeholder' => 'Body Text'])}}
                 </div>
-                {{Form::submit('Submit', ['class' => 'btn btn-success float-right'])}}
+                <a href="/posts" class="btn btn-danger float-right" style="margin: 3px;">Cancel</a>
+                {{Form::submit('Submit', ['style' => 'margin: 3px;', 'class' => 'btn btn-success float-right'])}}
             {!! Form::close() !!}
         </div>
 @endsection

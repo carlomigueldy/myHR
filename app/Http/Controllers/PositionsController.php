@@ -26,7 +26,7 @@ class PositionsController extends Controller
      */
     public function create()
     {
-        //
+        return view('positions.create');
     }
 
     /**
@@ -37,7 +37,16 @@ class PositionsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate($request, [
+            'position' => 'required'
+        ]);
+
+        // Create Postion
+        $pos = new Position;
+        $pos->position = $request->input('position');
+        $pos->save();
+
+        return redirect('/positions')->with('success', 'A new position was recently added.');
     }
 
     /**
