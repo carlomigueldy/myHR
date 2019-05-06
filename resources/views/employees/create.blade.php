@@ -2,17 +2,18 @@
 
 @section('content')
         <div class="container">
-            <h1>Create Post</h1>
+            <h1>Add Employee</h1>
             {{-- Using LaravelCollective HTML --}}
-            {!! Form::open(['action' => 'PostsController@store', 'method' => 'POST']) !!}
+            {!! Form::open(['action' => 'EmployeesController@store', 'method' => 'POST']) !!}
                 <div class="form-group">
-                    {{Form::label('title', 'Title')}}
-                    {{Form::text('title', '', ['class' => 'form-control', 'placeholder' => 'Title'])}}
-                </div>
+                    {{Form::label('Employee Name', 'Employee Name')}}
+                    {{Form::text('emp_name', '', ['class' => 'form-control', 'placeholder' => 'Name of the Employee'])}}
+                </div>   
                 <div class="form-group">
-                    {{Form::label('body', 'Body')}}
-                    {{Form::textarea('body', '', ['id' => 'article-ckeditor' ,'class' => 'form-control', 'placeholder' => 'Body Text'])}}
+                    {{Form::label('Employee Email', 'Employee Email')}}
+                    {{Form::text('emp_email', '', ['class' => 'form-control', 'placeholder' => 'Email of the Employee'])}}
                 </div>
+                <hr>
                 {{Form::submit('Submit', ['class' => 'btn btn-success float-right'])}}
             {!! Form::close() !!}
         </div>

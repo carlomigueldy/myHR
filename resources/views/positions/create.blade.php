@@ -9,6 +9,7 @@
                     {{Form::label('position', 'Position')}}
                     {{Form::text('position', '', ['class' => 'form-control', 'placeholder' => 'Position Name'])}}
                 </div>
+                <hr>    
                 <a href="/positions" class="btn btn-danger float-right" style="margin: 3px;">Cancel</a>
                 {{Form::submit('Submit', ['style' => 'margin: 3px;', 'class' => 'btn btn-success float-right'])}}
             {!! Form::close() !!}

@@ -21,7 +21,9 @@
                         <tr>
                             <td>{{$row->id}}</td>
                             <td>{{$row->position}}</td>
-                            <td><a href="/positions/{{$row->id}}">View</a></td>
+                            <td align="center">
+                                <a href="/positions/{{$row->id}}" class="btn btn-primary btn-sm">View</a>
+                            </td>
                         </tr>
                     @endforeach
                 </tbody>

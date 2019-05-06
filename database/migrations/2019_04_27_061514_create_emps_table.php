@@ -17,7 +17,7 @@ class CreateEmpsTable extends Migration
             $table->bigIncrements('id');
             $table->string('emp_name');
             $table->string('emp_email')->unique();
-            $table->timestamp('created_at')->default(DB::raw('CURRENT_TIMESTAMP'));
+            $table->timestamps();
         });
     }
 

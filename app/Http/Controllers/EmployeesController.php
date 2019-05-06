@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Emp;
 
 class EmployeesController extends Controller
 {
@@ -13,7 +14,10 @@ class EmployeesController extends Controller
      */
     public function index()
     {
-        return view('employees.index');
+        // $employees = Emp::orderBy('id', 'asc')->paginate(5);
+        $employees = Emp::paginate(5);
+        // $employees = Emp::all();
+        return view('employees.index')->with('employees', $employees);
     }
 
     /**
@@ -23,7 +27,7 @@ class EmployeesController extends Controller
      */
     public function create()
     {
-        //
+        return view('employees.create');
     }
 
     /**
@@ -34,7 +38,18 @@ class EmployeesController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate($request, [
+            'emp_name' => 'required',
+            'emp_email' => 'required'
+        ]);
+
+        // Create Post
+        $employees = new Emp;
+        $employees->emp_name = $request->input('emp_name');
+        $employees->emp_email = $request->input('emp_email');
+        $employees->save();
+
+        return redirect('/employees')->with('success', 'Employee Added');
     }
 
     /**
